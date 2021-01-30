@@ -94,20 +94,14 @@ public class Paddle : MonoBehaviour
         newPosition = gameObject.transform.position;
         float horizontalInput = Input.GetAxis("Horizontal");
 
-        if (horizontalInput > 0 && !paddleIsFrozen)
+        if (horizontalInput != 0 && !paddleIsFrozen)
         {
 
-            newPosition.x += ConfigurationUtils.PaddleMoveUnitsPerSecond * Time.fixedDeltaTime;
+            newPosition.x += ConfigurationUtils.PaddleMoveUnitsPerSecond * Time.fixedDeltaTime* horizontalInput;
 
 
         }
-        if (horizontalInput < 0 && !paddleIsFrozen)
-        {
-
-            newPosition.x -= ConfigurationUtils.PaddleMoveUnitsPerSecond * Time.fixedDeltaTime;
-
-
-        }
+       
 
 
         newPosition.x = CalculateClampedX();
