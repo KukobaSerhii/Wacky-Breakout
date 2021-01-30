@@ -31,14 +31,7 @@ public class Paddle : MonoBehaviour
 
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-      
-
-
-    }
+  
 
     float CalculateClampedX()
     {
@@ -60,7 +53,7 @@ public class Paddle : MonoBehaviour
         }
         return newPosition.x;
     }
-    //jvkvlyuhun;
+    
     void OnCollisionEnter2D(Collision2D coll)
     {
         float halfColliderWidth = boxColliderWidth / 2;
@@ -84,12 +77,12 @@ public class Paddle : MonoBehaviour
     {
         const float tolerance = 0.05f;
 
-        // on top collisions, both contact points are at the same y location
+        
         ContactPoint2D[] contacts = coll.contacts;
         return Mathf.Abs(contacts[0].point.y - contacts[1].point.y) < tolerance;
     }
 
-    //kjkjnfvjnfmv
+    
     private void FixedUpdate()
     {
         newPosition = gameObject.transform.position;
