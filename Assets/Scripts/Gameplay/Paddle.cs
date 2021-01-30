@@ -60,6 +60,7 @@ public class Paddle : MonoBehaviour
         }
         return newPosition.x;
     }
+    //jvkvlyuhun;
     void OnCollisionEnter2D(Collision2D coll)
     {
         float halfColliderWidth = boxColliderWidth / 2;
@@ -88,7 +89,7 @@ public class Paddle : MonoBehaviour
         return Mathf.Abs(contacts[0].point.y - contacts[1].point.y) < tolerance;
     }
 
-
+    //kjkjnfvjnfmv
     private void FixedUpdate()
     {
         newPosition = gameObject.transform.position;
